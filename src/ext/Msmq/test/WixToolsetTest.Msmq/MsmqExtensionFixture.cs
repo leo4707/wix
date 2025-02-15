@@ -3,14 +3,15 @@
 namespace WixToolsetTest.Msmq
 {
     using System.Linq;
-    using WixInternal.TestSupport;
-    using WixInternal.Core.TestPackage;
+    using Microsoft.VisualStudio.TestTools.UnitTesting;
+    using WixInternal.MSTestSupport;
+    using WixInternal.Core.MSTestPackage;
     using WixToolset.Msmq;
-    using Xunit;
 
+    [TestClass]
     public class MsmqExtensionFixture
     {
-        [Fact]
+        [TestMethod]
         public void CanBuildUsingMessageQueue()
         {
             var folder = TestData.Get(@"TestData\UsingMessageQueue");
